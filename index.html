@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Stock Insight Platform — AI-powered real-time stock analysis, trend prediction, and financial literacy dashboard for Indian NSE stocks." />
+  <title>Smart Stock Insight Platform | AI-Powered Real-Time Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="main-header">
+    <div class="header-inner">
+      <div class="logo" id="logo">
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="url(#lg)"/><path d="M7 18l4-5 4 3 6-8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+        </div>
+        <span class="logo-text">StockInsight<span class="logo-ai">AI</span></span>
+      </div>
+      <nav id="main-nav">
+        <a href="#stock-section" class="nav-link active">Dashboard</a>
+        <a href="#literacy-section" class="nav-link">Learn</a>
+        <a href="#trend-section" class="nav-link">Trends</a>
+        <a href="#chart-section" class="nav-link">Chart</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero-section">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>AI-Powered Real-Time Analysis</span>
+      </div>
+      <h1 id="hero-title">Smart Stock<br><span class="hero-gradient-text">Insight Platform</span></h1>
+      <p class="hero-subtitle">Track Indian stocks with <strong>live NSE data</strong>, predict trends using AI, and master financial concepts — all in a single dashboard.</p>
+      <div class="hero-actions">
+        <a href="#stock-section" class="btn btn-primary" id="hero-explore-btn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l3-3 3 2 6-7"/><path d="M15 4h3v3"/></svg>
+          Explore Dashboard
+        </a>
+        <a href="#literacy-section" class="btn btn-glass" id="hero-learn-btn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M16 3h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></svg>
+          Start Learning
+        </a>
+      </div>
+      <!-- Hero Stats Ticker -->
+      <div class="hero-stats-bar" id="hero-stats-bar">
+        <div class="hero-stat">
+          <span class="hs-label">Stocks Tracked</span>
+          <span class="hs-value">10+</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hs-label">Data Source</span>
+          <span class="hs-value">NSE Live</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hs-label">Refresh Rate</span>
+          <span class="hs-value">30s</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STOCK INFO SECTION ===== -->
+  <section id="stock-section" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">📈 Dashboard</span>
+        <h2 class="section-title">Live Stock Dashboard</h2>
+        <p class="section-desc">Real-time data from National Stock Exchange (NSE) via Yahoo Finance</p>
+      </div>
+
+      <!-- Controls Row -->
+      <div class="controls" id="stock-controls">
+        <div class="select-wrapper">
+          <label for="stock-select">Select Stock</label>
+          <select id="stock-select">
+            <option value="reliance" selected>Reliance Industries Ltd.</option>
+            <option value="tcs">Tata Consultancy Services</option>
+            <option value="infosys">Infosys Ltd.</option>
+            <option value="hdfcbank">HDFC Bank Ltd.</option>
+            <option value="wipro">Wipro Ltd.</option>
+            <option value="bajajfinance">Bajaj Finance Ltd.</option>
+            <option value="hul">Hindustan Unilever Ltd.</option>
+            <option value="itc">ITC Ltd.</option>
+            <option value="adanient">Adani Enterprises Ltd.</option>
+            <option value="sbi">State Bank of India</option>
+          </select>
+        </div>
+        <button class="btn btn-refresh" id="refresh-btn">
+          <svg class="refresh-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v5h5"/><path d="M1 9A7 7 0 0 1 13.15 3.46L15 5"/><path d="M15 12v-5h-5"/><path d="M15 7A7 7 0 0 1 2.85 12.54L1 11"/></svg>
+          Refresh
+        </button>
+        <div class="live-indicator" id="live-indicator">
+          <span class="live-dot"></span>
+          <span class="live-text">LIVE</span>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner-ring">
+          <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="22" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="url(#spinGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="60"><animateTransform attributeName="transform" type="rotate" values="0 26 26;360 26 26" dur="1s" repeatCount="indefinite"/></circle><defs><linearGradient id="spinGrad" x1="0" y1="0" x2="52" y2="52"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+        </div>
+        <p>Fetching live data from NSE…</p>
+      </div>
+
+      <!-- Error Banner -->
+      <div class="error-banner" id="error-banner" style="display:none;">
+        <div class="error-icon">⚠️</div>
+        <p id="error-text">Failed to fetch data. Please ensure the server is running.</p>
+        <button class="btn btn-retry" id="error-retry-btn">Retry</button>
+      </div>
+
+      <!-- Stock Card -->
+      <div class="stock-card" id="stock-card" style="display:none;">
+        <div class="stock-card-top-bar"></div>
+        <div class="stock-card-header">
+          <div class="stock-identity">
+            <h3 class="stock-name" id="stock-name">—</h3>
+            <p class="stock-ticker" id="stock-ticker">—</p>
+          </div>
+          <div class="stock-price-box">
+            <span class="stock-price" id="stock-price">—</span>
+            <span class="stock-change positive" id="stock-change">—</span>
+          </div>
+        </div>
+        <div class="stock-meta" id="stock-meta"></div>
+        <p class="stock-desc" id="stock-desc">—</p>
+        <div class="stock-stats" id="stock-stats">
+          <div class="stat-item">
+            <span class="stat-icon">🔺</span>
+            <div>
+              <span class="stat-label">Day High</span>
+              <span class="stat-value" id="stat-high">—</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🔻</span>
+            <div>
+              <span class="stat-label">Day Low</span>
+              <span class="stat-value" id="stat-low">—</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🔓</span>
+            <div>
+              <span class="stat-label">Open</span>
+              <span class="stat-value" id="stat-open">—</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🔒</span>
+            <div>
+              <span class="stat-label">Prev. Close</span>
+              <span class="stat-value" id="stat-prev">—</span>
+            </div>
+          </div>
+        </div>
+        <p class="fetched-at" id="fetched-at"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINANCIAL LITERACY SECTION ===== -->
+  <section id="literacy-section" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">📚 Learn</span>
+        <h2 class="section-title">Financial Literacy</h2>
+        <p class="section-desc">Master essential financial terms before you start investing</p>
+      </div>
+      <div class="literacy-grid" id="literacy-grid">
+        <!-- Cards injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI PREDICTION SECTION ===== -->
+  <section id="trend-section" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">🤖 AI Analysis</span>
+        <h2 class="section-title">AI Trend Prediction</h2>
+        <p class="section-desc">Multi-factor scoring system using RSI, SMA, momentum, volatility & volume analysis</p>
+      </div>
+
+      <!-- Row 1: AI Signal + Predicted Price + AI Score Meter -->
+      <div class="ai-top-row">
+        <!-- AI Signal -->
+        <div class="signal-card glass-card" id="signal-card">
+          <div class="signal-glow" aria-hidden="true"></div>
+          <p class="signal-label">AI Signal</p>
+          <div class="signal-badge" id="signal-badge">HOLD</div>
+          <div class="signal-icon" id="signal-icon">📊</div>
+          <div class="signal-bar"><div class="signal-fill" id="signal-fill"></div></div>
+          <p class="signal-confidence" id="signal-confidence">Confidence: —</p>
+        </div>
+
+        <!-- AI Score Meter -->
+        <div class="score-meter-card glass-card" id="score-meter-card">
+          <p class="score-meter-label">AI Score</p>
+          <div class="score-meter">
+            <div class="score-track">
+              <div class="score-zones">
+                <span class="zone zone-sell">SELL</span>
+                <span class="zone zone-hold">HOLD</span>
+                <span class="zone zone-buy">BUY</span>
+              </div>
+              <div class="score-pointer" id="score-pointer"></div>
+            </div>
+            <div class="score-scale">
+              <span>-10</span><span>-5</span><span>0</span><span>+5</span><span>+10</span>
+            </div>
+          </div>
+          <p class="score-value" id="ai-score-value">0.0</p>
+          <div class="sub-scores" id="sub-scores-display"></div>
+        </div>
+
+        <!-- Predicted Price -->
+        <div class="predicted-card glass-card" id="predicted-card">
+          <p class="predicted-label">🔮 Predicted Next Close</p>
+          <div class="predicted-price-row">
+            <span class="predicted-price" id="predicted-price">—</span>
+            <span class="predicted-change" id="predicted-change">—</span>
+          </div>
+          <p class="predicted-direction" id="predicted-direction">—</p>
+          <div class="momentum-badge-row">
+            <span class="momentum-badge" id="momentum-badge">Momentum: —</span>
+          </div>
+          <p class="predicted-note">WMA + momentum adjustment model</p>
+        </div>
+      </div>
+
+      <!-- Row 2: Trend Strength + Risk Level + Support/Resistance -->
+      <div class="ai-info-row">
+        <!-- Trend Strength -->
+        <div class="info-card glass-card" id="trend-strength-card">
+          <div class="ind-header"><span class="ind-icon">💪</span><span class="ind-title">Trend Strength</span></div>
+          <div class="strength-meter">
+            <div class="strength-bar-bg">
+              <div class="strength-bar-fill" id="strength-fill"></div>
+            </div>
+            <div class="strength-labels">
+              <span>Weak</span><span>Moderate</span><span>Strong</span>
+            </div>
+          </div>
+          <div class="strength-verdict" id="strength-verdict">—</div>
+          <p class="ind-hint" id="strength-direction">—</p>
+        </div>
+
+        <!-- Risk Level -->
+        <div class="info-card glass-card" id="risk-card">
+          <div class="ind-header"><span class="ind-icon">🛡️</span><span class="ind-title">Risk Level</span></div>
+          <div class="risk-display">
+            <div class="risk-badge" id="risk-badge">—</div>
+          </div>
+          <div class="risk-dots" id="risk-dots">
+            <span class="risk-dot"></span><span class="risk-dot"></span><span class="risk-dot"></span><span class="risk-dot"></span><span class="risk-dot"></span>
+          </div>
+          <p class="ind-hint">Based on volatility, position & volume</p>
+        </div>
+
+        <!-- Support & Resistance -->
+        <div class="info-card glass-card" id="sr-card">
+          <div class="ind-header"><span class="ind-icon">📐</span><span class="ind-title">Support & Resistance</span></div>
+          <div class="sr-display">
+            <div class="sr-item sr-resistance">
+              <span class="sr-label">Resistance</span>
+              <span class="sr-value" id="sr-resistance">—</span>
+            </div>
+            <div class="sr-range-bar">
+              <div class="sr-bar-track">
+                <div class="sr-price-marker" id="sr-price-marker"></div>
+              </div>
+            </div>
+            <div class="sr-item sr-support">
+              <span class="sr-label">Support</span>
+              <span class="sr-value" id="sr-support">—</span>
+            </div>
+          </div>
+          <div class="sr-alert-badge" id="sr-alert-badge">—</div>
+          <p class="ind-hint" id="sr-hint">—</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Technical Indicator Cards -->
+      <div class="indicator-grid" id="indicator-grid">
+        <!-- RSI -->
+        <div class="indicator-card glass-card" id="rsi-card">
+          <div class="ind-header"><span class="ind-icon">📊</span><span class="ind-title">RSI (14)</span></div>
+          <div class="rsi-gauge">
+            <div class="rsi-bar-bg"><div class="rsi-bar-fill" id="rsi-fill"></div><div class="rsi-needle" id="rsi-needle"></div></div>
+            <div class="rsi-labels"><span>Oversold</span><span>Neutral</span><span>Overbought</span></div>
+          </div>
+          <p class="ind-value" id="rsi-value">—</p>
+          <p class="ind-hint" id="rsi-hint">—</p>
+        </div>
+
+        <!-- SMA Crossover -->
+        <div class="indicator-card glass-card" id="sma-card">
+          <div class="ind-header"><span class="ind-icon">📈</span><span class="ind-title">SMA Crossover</span></div>
+          <div class="sma-values">
+            <div class="sma-item"><span class="sma-label">SMA-5</span><span class="sma-val" id="sma5-val">—</span></div>
+            <div class="sma-divider">vs</div>
+            <div class="sma-item"><span class="sma-label">SMA-10</span><span class="sma-val" id="sma10-val">—</span></div>
+          </div>
+          <div class="sma-signal-badge" id="sma-signal">—</div>
+          <p class="ind-hint" id="sma-hint">—</p>
+        </div>
+
+        <!-- Volatility -->
+        <div class="indicator-card glass-card" id="vol-card">
+          <div class="ind-header"><span class="ind-icon">⚡</span><span class="ind-title">Volatility</span></div>
+          <p class="vol-pct" id="vol-pct">—</p>
+          <div class="vol-badge" id="vol-badge">—</div>
+          <p class="ind-hint" id="vol-hint">10-day standard deviation</p>
+        </div>
+
+        <!-- Volume Trend -->
+        <div class="indicator-card glass-card" id="volume-card">
+          <div class="ind-header"><span class="ind-icon">📦</span><span class="ind-title">Volume Trend</span></div>
+          <p class="vol-change-pct" id="vol-change-pct">—</p>
+          <div class="vol-trend-badge" id="vol-trend-badge">—</div>
+          <p class="ind-hint" id="vol-trend-hint">5d avg vs 10d avg</p>
+        </div>
+      </div>
+
+      <!-- Row 4: Smart AI Insight -->
+      <div class="insight-card glass-card" id="insight-card" style="margin-top:22px;">
+        <div class="card-header-row"><h3>🧠 Smart AI Insight</h3></div>
+        <p class="insight-text" id="insight-text">Analyzing market data…</p>
+      </div>
+
+      <!-- Row 5: Price History Table -->
+      <div class="trend-table-card glass-card" id="trend-table-card" style="margin-top:22px;">
+        <div class="card-header-row"><h3>📋 Last 5 Trading Days — Real Data</h3></div>
+        <div class="table-scroll">
+          <table id="trend-table">
+            <thead><tr><th>Day</th><th>Date</th><th>Close (₹)</th><th>Volume</th><th>Change</th></tr></thead>
+            <tbody id="trend-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHART SECTION ===== -->
+  <section id="chart-section" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">📊 Visualize</span>
+        <h2 class="section-title">Price Chart + Prediction</h2>
+        <p class="section-desc">Real historical data from NSE — with AI predicted next-day price shown as a dashed line</p>
+      </div>
+      <div class="chart-card glass-card" id="chart-card">
+        <canvas id="price-chart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="main-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="url(#lg2)"/><path d="M7 18l4-5 4 3 6-8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+          </div>
+          <span>StockInsight<span class="logo-ai">AI</span></span>
+        </div>
+        <p class="footer-desc">An AI-powered stock analysis platform built for learning and education.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-text">Smart Stock Insight Platform — College Project © 2026</p>
+        <p class="footer-note">Real-time data sourced from Yahoo Finance (NSE). For educational purposes only — not financial advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
