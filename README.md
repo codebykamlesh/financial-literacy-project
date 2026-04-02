@@ -158,6 +158,11 @@ http://127.0.0.1:5000
 ## 🧑‍💻 Author
 
 * TEAM CODE CATALYST
+* Purohit Kamleshsingh Savalsingh
+* Anuruddha kumar kahar
+* Aayush Singh
+* Shrimali Jainam Ravindrakumar
+* Joshi Rudram Manojbhai
 
 ---
 
