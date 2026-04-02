@@ -2,9 +2,10 @@
    SMART STOCK INSIGHT PLATFORM — APP.JS
    Version 3.0 — Advanced AI Multi-Factor Analysis
    ======================================================== */
-
-const API_BASE = "http://127.0.0.1:5000";
-
+// Use local server for file:// development, else use relative paths for Render/Vercel
+const API_BASE = (window.location.protocol === "file:" || window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") 
+    ? "http://127.0.0.1:5000" 
+    : "";
 // ─── FINANCIAL LITERACY DATA ───
 const LITERACY_CARDS = [
   { icon: "📊", title: "What is a Stock?", desc: "A stock represents ownership in a company. When you buy a stock, you become a partial owner and may benefit from the company's profits." },
