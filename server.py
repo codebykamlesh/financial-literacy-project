@@ -118,6 +118,156 @@ STOCK_MAP = {
             {"label": "Public Sector", "cls": "psu"}
         ],
         "description": "State Bank of India is India's largest public sector bank and one of the world's largest banks by assets. With over 22,000 branches and 65,000+ ATMs, SBI serves millions of customers."
+    },
+    "icicibank": {
+        "symbol": "ICICIBANK.NS",
+        "name": "ICICI Bank Ltd.",
+        "ticker_display": "NSE: ICICIBANK",
+        "sectors": [
+            {"label": "Banking",           "cls": "banking"},
+            {"label": "Financial Services", "cls": "finance"}
+        ],
+        "description": "ICICI Bank is India's second-largest private sector bank by assets. It offers a wide range of banking and financial services to retail, SME, and corporate customers across India and globally."
+    },
+    "axisbank": {
+        "symbol": "AXISBANK.NS",
+        "name": "Axis Bank Ltd.",
+        "ticker_display": "NSE: AXISBANK",
+        "sectors": [
+            {"label": "Banking",           "cls": "banking"},
+            {"label": "Financial Services", "cls": "finance"}
+        ],
+        "description": "Axis Bank is the third-largest private sector bank in India. It offers a spectrum of financial services to large and mid-size corporates, MSME, agriculture, and retail businesses."
+    },
+    "kotakbank": {
+        "symbol": "KOTAKBANK.NS",
+        "name": "Kotak Mahindra Bank",
+        "ticker_display": "NSE: KOTAKBANK",
+        "sectors": [
+            {"label": "Banking",           "cls": "banking"},
+            {"label": "Financial Services", "cls": "finance"}
+        ],
+        "description": "Kotak Mahindra Bank is a leading private sector bank in India offering a full suite of financial services including retail banking, corporate banking, investment banking, and wealth management."
+    },
+    "sunpharma": {
+        "symbol": "SUNPHARMA.NS",
+        "name": "Sun Pharmaceutical Ltd.",
+        "ticker_display": "NSE: SUNPHARMA",
+        "sectors": [
+            {"label": "Pharmaceuticals", "cls": "fmcg"},
+            {"label": "Healthcare",      "cls": "consulting"}
+        ],
+        "description": "Sun Pharmaceutical Industries is India's largest pharmaceutical company and the world's fourth-largest specialty generics company. It manufactures branded and generic medicinal products."
+    },
+    "drreddy": {
+        "symbol": "DRREDDY.NS",
+        "name": "Dr. Reddy's Laboratories",
+        "ticker_display": "NSE: DRREDDY",
+        "sectors": [
+            {"label": "Pharmaceuticals", "cls": "fmcg"},
+            {"label": "Healthcare",      "cls": "consulting"}
+        ],
+        "description": "Dr. Reddy's Laboratories is an Indian multinational pharmaceutical company. It produces finished dosage forms, active pharmaceutical ingredients (APIs), and biosimilars for global markets."
+    },
+    "maruti": {
+        "symbol": "MARUTI.NS",
+        "name": "Maruti Suzuki India Ltd.",
+        "ticker_display": "NSE: MARUTI",
+        "sectors": [
+            {"label": "Automobiles",    "cls": "infra"},
+            {"label": "Manufacturing",  "cls": "energy"}
+        ],
+        "description": "Maruti Suzuki India Limited is India's largest passenger car manufacturer with over 40% market share. A subsidiary of Suzuki Motor Corporation, it sells popular models like Swift, Baleno, and Brezza."
+    },
+    "tatamotors": {
+        "symbol": "TATAMOTORS.NS",
+        "name": "Tata Motors Ltd.",
+        "ticker_display": "NSE: TATAMOTORS",
+        "sectors": [
+            {"label": "Automobiles",  "cls": "infra"},
+            {"label": "EV",           "cls": "energy"}
+        ],
+        "description": "Tata Motors is India's largest automobile manufacturer by revenue. It owns Jaguar Land Rover and has an extensive portfolio of commercial and passenger vehicles including Electric Vehicles."
+    },
+    "tatasteel": {
+        "symbol": "TATASTEEL.NS",
+        "name": "Tata Steel Ltd.",
+        "ticker_display": "NSE: TATASTEEL",
+        "sectors": [
+            {"label": "Steel",        "cls": "mining"},
+            {"label": "Manufacturing","cls": "infra"}
+        ],
+        "description": "Tata Steel is one of the world's top steel producers with a significant presence in India and Europe. It is part of the Tata Group and operates some of the most technologically advanced steel plants globally."
+    },
+    "hcltech": {
+        "symbol": "HCLTECH.NS",
+        "name": "HCL Technologies Ltd.",
+        "ticker_display": "NSE: HCLTECH",
+        "sectors": [
+            {"label": "IT Services",  "cls": "it"},
+            {"label": "Consulting",   "cls": "consulting"}
+        ],
+        "description": "HCL Technologies is a global technology company that helps enterprises reimagine their businesses for the digital age through services, products, and platforms across IT and business services."
+    },
+    "techm": {
+        "symbol": "TECHM.NS",
+        "name": "Tech Mahindra Ltd.",
+        "ticker_display": "NSE: TECHM",
+        "sectors": [
+            {"label": "IT Services",   "cls": "it"},
+            {"label": "Telecom Tech",  "cls": "telecom"}
+        ],
+        "description": "Tech Mahindra is a global IT company enabling digital transformation for 1,100+ customers across 90+ countries. A Mahindra Group company, it specializes in telecom, BFSI, and enterprise IT services."
+    },
+    "titan": {
+        "symbol": "TITAN.NS",
+        "name": "Titan Company Ltd.",
+        "ticker_display": "NSE: TITAN",
+        "sectors": [
+            {"label": "Consumer Goods",  "cls": "retail"},
+            {"label": "Luxury",          "cls": "fmcg"}
+        ],
+        "description": "Titan Company is India's most iconic consumer lifestyle company and part of the Tata Group. It owns popular brands like Tanishq (jewellery), Titan (watches), and Fastrack."
+    },
+    "ultracemco": {
+        "symbol": "ULTRACEMCO.NS",
+        "name": "UltraTech Cement Ltd.",
+        "ticker_display": "NSE: ULTRACEMCO",
+        "sectors": [
+            {"label": "Cement",         "cls": "infra"},
+            {"label": "Infrastructure",  "cls": "mining"}
+        ],
+        "description": "UltraTech Cement is India's largest cement company and the third-largest in the world outside China. It is part of the Aditya Birla Group with a massive installed capacity across India and overseas."
+    },
+    "nestleind": {
+        "symbol": "NESTLEIND.NS",
+        "name": "Nestle India Ltd.",
+        "ticker_display": "NSE: NESTLEIND",
+        "sectors": [
+            {"label": "FMCG",          "cls": "fmcg"},
+            {"label": "Food & Beverages", "cls": "retail"}
+        ],
+        "description": "Nestlé India is a subsidiary of Nestlé S.A., Switzerland. It is one of India's leading FMCG companies, known for iconic brands like Maggi noodles, KitKat, Nescafé, and Munch."
+    },
+    "powergrid": {
+        "symbol": "POWERGRID.NS",
+        "name": "Power Grid Corporation",
+        "ticker_display": "NSE: POWERGRID",
+        "sectors": [
+            {"label": "Power",          "cls": "energy"},
+            {"label": "Public Sector",   "cls": "psu"}
+        ],
+        "description": "Power Grid Corporation of India is a state-owned electric utilities company that owns and operates the national electricity transmission network. It is a Maharatna PSU under the Ministry of Power."
+    },
+    "ntpc": {
+        "symbol": "NTPC.NS",
+        "name": "NTPC Ltd.",
+        "ticker_display": "NSE: NTPC",
+        "sectors": [
+            {"label": "Power Generation", "cls": "energy"},
+            {"label": "Public Sector",    "cls": "psu"}
+        ],
+        "description": "NTPC Limited is India's largest power generating company and a Maharatna Central Public Sector Enterprise. It has a diversified portfolio of thermal, hydro, solar, and wind power plants."
     }
 }
 
