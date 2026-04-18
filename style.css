@@ -768,6 +768,13 @@ img { max-width: 100%; display: block; }
 .chart-card { padding: 28px; }
 #price-chart { width: 100% !important; max-height: 420px; }
 
+/* Chart wrapper ensures the canvas has a defined height on any screen */
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
 /* ═══════════════════════════════════
    FOOTER
    ═══════════════════════════════════ */
@@ -863,8 +870,9 @@ img { max-width: 100%; display: block; }
   .live-indicator { align-self: flex-start; }
   .select-wrapper { min-width: unset; width: 100%; }
 
-  .chart-card { padding: 16px; }
-  #price-chart { max-height: 280px; }
+  .chart-card { padding: 16px 10px; }
+  .chart-wrapper { height: 300px; }
+  #price-chart { max-height: unset; }
 
   .hero-stats-bar {
     flex-direction: row; flex-wrap: wrap; gap: 0;
@@ -908,7 +916,8 @@ img { max-width: 100%; display: block; }
   .signal-badge { font-size: 1.1rem; }
   .literacy-grid { grid-template-columns: 1fr; }
   .hero-stats-bar { padding: 12px; }
-  #price-chart { max-height: 220px; }
+  .chart-wrapper { height: 260px; }
+  #price-chart { max-height: unset; }
   .stock-card { padding: 0 14px 18px; }
   .stock-card-top-bar { margin: 0 -14px 18px; }
 }

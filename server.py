@@ -268,6 +268,146 @@ STOCK_MAP = {
             {"label": "Public Sector",    "cls": "psu"}
         ],
         "description": "NTPC Limited is India's largest power generating company and a Maharatna Central Public Sector Enterprise. It has a diversified portfolio of thermal, hydro, solar, and wind power plants."
+    },
+    "lnt": {
+        "symbol": "LT.NS",
+        "name": "Larsen & Toubro Ltd.",
+        "ticker_display": "NSE: LT",
+        "sectors": [
+            {"label": "Infrastructure", "cls": "infra"},
+            {"label": "Engineering",    "cls": "consulting"}
+        ],
+        "description": "Larsen & Toubro is a major technology, engineering, construction, manufacturing and financial services conglomerate. It has a global presence and is a dominant player in infrastructure projects across India and overseas."
+    },
+    "mahindra": {
+        "symbol": "M&M.NS",
+        "name": "Mahindra & Mahindra Ltd.",
+        "ticker_display": "NSE: M&M",
+        "sectors": [
+            {"label": "Automobiles", "cls": "infra"},
+            {"label": "Tractors",    "cls": "agri"}
+        ],
+        "description": "Mahindra & Mahindra is a leading Indian multinational automotive manufacturing corporation. It is best known for SUVs, tractors, and commercial vehicles, and is a key player in India's EV transition."
+    },
+    "ongc": {
+        "symbol": "ONGC.NS",
+        "name": "Oil & Natural Gas Corp.",
+        "ticker_display": "NSE: ONGC",
+        "sectors": [
+            {"label": "Oil & Gas",     "cls": "energy"},
+            {"label": "Public Sector", "cls": "psu"}
+        ],
+        "description": "Oil and Natural Gas Corporation (ONGC) is India's largest crude oil and natural gas company, contributing over 70% of India's domestic production. It is a Maharatna PSU with significant global operations."
+    },
+    "coalindia": {
+        "symbol": "COALINDIA.NS",
+        "name": "Coal India Ltd.",
+        "ticker_display": "NSE: COALINDIA",
+        "sectors": [
+            {"label": "Mining",        "cls": "mining"},
+            {"label": "Public Sector", "cls": "psu"}
+        ],
+        "description": "Coal India Limited is the world's largest coal producer and one of the largest corporate employers. A Maharatna PSU, it accounts for over 80% of India's coal production and is critical to the country's energy security."
+    },
+    "airtel": {
+        "symbol": "BHARTIARTL.NS",
+        "name": "Bharti Airtel Ltd.",
+        "ticker_display": "NSE: BHARTIARTL",
+        "sectors": [
+            {"label": "Telecom",  "cls": "telecom"},
+            {"label": "DTH",      "cls": "it"}
+        ],
+        "description": "Bharti Airtel is one of India's leading telecommunications companies and a global brand operating in 18 countries. It offers mobile, broadband, DTH, and enterprise solutions and is a major player in the 5G rollout."
+    },
+    "cipla": {
+        "symbol": "CIPLA.NS",
+        "name": "Cipla Ltd.",
+        "ticker_display": "NSE: CIPLA",
+        "sectors": [
+            {"label": "Pharmaceuticals", "cls": "fmcg"},
+            {"label": "Healthcare",      "cls": "consulting"}
+        ],
+        "description": "Cipla is a leading global pharmaceutical company focused on agile and sustainable growth. It has a portfolio of 1,500+ products in over 80 countries, with a strong emphasis on affordable generics and respiratory medicine."
+    },
+    "divislab": {
+        "symbol": "DIVISLAB.NS",
+        "name": "Divi's Laboratories Ltd.",
+        "ticker_display": "NSE: DIVISLAB",
+        "sectors": [
+            {"label": "Pharma APIs",     "cls": "fmcg"},
+            {"label": "Life Sciences",   "cls": "consulting"}
+        ],
+        "description": "Divi's Laboratories is one of India's top pharmaceutical manufacturers, specializing in Active Pharmaceutical Ingredients (APIs) and intermediates. It is a key global supplier for major innovator pharma companies."
+    },
+    "asianpaint": {
+        "symbol": "ASIANPAINT.NS",
+        "name": "Asian Paints Ltd.",
+        "ticker_display": "NSE: ASIANPAINT",
+        "sectors": [
+            {"label": "Paints",          "cls": "retail"},
+            {"label": "Consumer Goods",  "cls": "fmcg"}
+        ],
+        "description": "Asian Paints is India's largest paint company and ranks among the top 10 decorative coatings companies in the world. It operates in 15 countries across Asia, Middle East, South Pacific, and Africa."
+    },
+    "pidilite": {
+        "symbol": "PIDILITIND.NS",
+        "name": "Pidilite Industries Ltd.",
+        "ticker_display": "NSE: PIDILITIND",
+        "sectors": [
+            {"label": "Adhesives",        "cls": "infra"},
+            {"label": "Consumer Goods",   "cls": "retail"}
+        ],
+        "description": "Pidilite Industries is India's leading manufacturer of adhesives and sealants. Known for iconic brands like Fevicol and Dr. Fixit, it dominates the adhesives market and has a strong presence in construction chemicals."
+    },
+    "hindzinc": {
+        "symbol": "HINDZINC.NS",
+        "name": "Hindustan Zinc Ltd.",
+        "ticker_display": "NSE: HINDZINC",
+        "sectors": [
+            {"label": "Zinc & Lead",  "cls": "mining"},
+            {"label": "Silver",       "cls": "energy"}
+        ],
+        "description": "Hindustan Zinc is the world's second-largest zinc producer and the world's largest integrated zinc-lead producer. A subsidiary of Vedanta, it also produces significant quantities of silver as a by-product."
+    },
+    "vedanta": {
+        "symbol": "VEDL.NS",
+        "name": "Vedanta Ltd.",
+        "ticker_display": "NSE: VEDL",
+        "sectors": [
+            {"label": "Metals",   "cls": "mining"},
+            {"label": "Oil & Gas","cls": "energy"}
+        ],
+        "description": "Vedanta Limited is a diversified natural resources company with businesses in zinc, lead, silver, copper, iron ore, steel, aluminium, power, and oil & gas. It is a subsidiary of Vedanta Resources plc."
+    },
+    "jswsteel": {
+        "symbol": "JSWSTEEL.NS",
+        "name": "JSW Steel Ltd.",
+        "ticker_display": "NSE: JSWSTEEL",
+        "sectors": [
+            {"label": "Steel",         "cls": "mining"},
+            {"label": "Manufacturing", "cls": "infra"}
+        ],
+        "description": "JSW Steel is India's leading integrated steel company and part of the JSW Group. With a capacity of over 28 MTPA, it manufactures flat and long steel products and has operations in India, the US, and Europe."
+    },
+    "bpcl": {
+        "symbol": "BPCL.NS",
+        "name": "Bharat Petroleum Corp. Ltd.",
+        "ticker_display": "NSE: BPCL",
+        "sectors": [
+            {"label": "Oil Refining",  "cls": "energy"},
+            {"label": "Public Sector", "cls": "psu"}
+        ],
+        "description": "Bharat Petroleum Corporation Limited is a Maharatna oil refining and marketing PSU. It operates major refineries in Mumbai and Kochi, and has a vast network of petrol stations and LPG distribution across India."
+    },
+    "zomato": {
+        "symbol": "ZOMATO.NS",
+        "name": "Zomato Ltd.",
+        "ticker_display": "NSE: ZOMATO",
+        "sectors": [
+            {"label": "Food Tech",   "cls": "it"},
+            {"label": "Quick Commerce", "cls": "retail"}
+        ],
+        "description": "Zomato is India's largest food delivery and quick commerce platform. It connects millions of customers with restaurants and operates Blinkit for grocery delivery. A pioneer of India's new-age consumer tech economy."
     }
 }
 

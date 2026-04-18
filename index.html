@@ -60,7 +60,7 @@
       <div class="hero-stats-bar" id="hero-stats-bar">
         <div class="hero-stat">
           <span class="hs-label">Stocks Tracked</span>
-          <span class="hs-value">25+</span>
+          <span class="hs-value">40+</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
@@ -90,31 +90,61 @@
         <div class="select-wrapper">
           <label for="stock-select">Select Stock</label>
           <select id="stock-select">
-            <option value="reliance" selected>Reliance Industries Ltd.</option>
-            <option value="tcs">Tata Consultancy Services</option>
-            <option value="infosys">Infosys Ltd.</option>
-            <option value="hdfcbank">HDFC Bank Ltd.</option>
-            <option value="wipro">Wipro Ltd.</option>
-            <option value="bajajfinance">Bajaj Finance Ltd.</option>
-            <option value="hul">Hindustan Unilever Ltd.</option>
-            <option value="itc">ITC Ltd.</option>
-            <option value="adanient">Adani Enterprises Ltd.</option>
-            <option value="sbi">State Bank of India</option>
-            <option value="icicibank">ICICI Bank Ltd.</option>
-            <option value="axisbank">Axis Bank Ltd.</option>
-            <option value="kotakbank">Kotak Mahindra Bank</option>
-            <option value="sunpharma">Sun Pharmaceutical Ltd.</option>
-            <option value="drreddy">Dr. Reddy's Laboratories</option>
-            <option value="maruti">Maruti Suzuki India Ltd.</option>
-            <option value="tatamotors">Tata Motors Ltd.</option>
-            <option value="tatasteel">Tata Steel Ltd.</option>
-            <option value="hcltech">HCL Technologies Ltd.</option>
-            <option value="techm">Tech Mahindra Ltd.</option>
-            <option value="titan">Titan Company Ltd.</option>
-            <option value="ultracemco">UltraTech Cement Ltd.</option>
-            <option value="nestleind">Nestle India Ltd.</option>
-            <option value="powergrid">Power Grid Corporation</option>
-            <option value="ntpc">NTPC Ltd.</option>
+            <optgroup label="─── IT & Tech ───">
+              <option value="tcs">Tata Consultancy Services</option>
+              <option value="infosys">Infosys Ltd.</option>
+              <option value="wipro">Wipro Ltd.</option>
+              <option value="hcltech">HCL Technologies Ltd.</option>
+              <option value="techm">Tech Mahindra Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Banking & Finance ───">
+              <option value="hdfcbank">HDFC Bank Ltd.</option>
+              <option value="icicibank">ICICI Bank Ltd.</option>
+              <option value="axisbank">Axis Bank Ltd.</option>
+              <option value="kotakbank">Kotak Mahindra Bank</option>
+              <option value="sbi">State Bank of India</option>
+              <option value="bajajfinance">Bajaj Finance Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Energy & Commodities ───">
+              <option value="reliance" selected>Reliance Industries Ltd.</option>
+              <option value="ongc">Oil & Natural Gas Corp.</option>
+              <option value="bpcl">Bharat Petroleum Corp. Ltd.</option>
+              <option value="ntpc">NTPC Ltd.</option>
+              <option value="powergrid">Power Grid Corporation</option>
+              <option value="coalindia">Coal India Ltd.</option>
+              <option value="hindzinc">Hindustan Zinc Ltd.</option>
+              <option value="vedanta">Vedanta Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Automobiles ───">
+              <option value="tatamotors">Tata Motors Ltd.</option>
+              <option value="maruti">Maruti Suzuki India Ltd.</option>
+              <option value="mahindra">Mahindra & Mahindra Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Pharma & Healthcare ───">
+              <option value="sunpharma">Sun Pharmaceutical Ltd.</option>
+              <option value="drreddy">Dr. Reddy's Laboratories</option>
+              <option value="cipla">Cipla Ltd.</option>
+              <option value="divislab">Divi's Laboratories Ltd.</option>
+            </optgroup>
+            <optgroup label="─── FMCG & Consumer ───">
+              <option value="hul">Hindustan Unilever Ltd.</option>
+              <option value="itc">ITC Ltd.</option>
+              <option value="nestleind">Nestle India Ltd.</option>
+              <option value="titan">Titan Company Ltd.</option>
+              <option value="asianpaint">Asian Paints Ltd.</option>
+              <option value="pidilite">Pidilite Industries Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Infrastructure & Steel ───">
+              <option value="adanient">Adani Enterprises Ltd.</option>
+              <option value="lnt">Larsen & Toubro Ltd.</option>
+              <option value="ultracemco">UltraTech Cement Ltd.</option>
+              <option value="tatasteel">Tata Steel Ltd.</option>
+              <option value="jswsteel">JSW Steel Ltd.</option>
+            </optgroup>
+            <optgroup label="─── Telecom & New-Age ───">
+              <option value="airtel">Bharti Airtel Ltd.</option>
+              <option value="zomato">Zomato Ltd.</option>
+            </optgroup>
           </select>
         </div>
         <button class="btn btn-refresh" id="refresh-btn">
@@ -384,7 +414,9 @@
         <p class="section-desc">Real historical data from NSE — with AI predicted next-day price shown as a dashed line</p>
       </div>
       <div class="chart-card glass-card" id="chart-card">
-        <canvas id="price-chart"></canvas>
+        <div class="chart-wrapper">
+          <canvas id="price-chart"></canvas>
+        </div>
       </div>
     </div>
   </section>

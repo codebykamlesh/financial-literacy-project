@@ -430,7 +430,7 @@ function renderChart(data) {
     type: 'line',
     data: { labels, datasets },
     options: {
-      responsive: true, maintainAspectRatio: true,
+      responsive: true, maintainAspectRatio: false,
       animation: {
         duration: 2500,
         easing: 'easeOutQuart'
@@ -438,7 +438,13 @@ function renderChart(data) {
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: { 
-          labels: { color: '#64748b', font: { family: "'Inter',sans-serif", size: 12, weight: 600 }, usePointStyle: true, pointStyle: 'circle', padding: 20 } 
+          labels: { 
+            color: '#64748b', 
+            font: { family: "'Inter',sans-serif", size: window.innerWidth < 480 ? 10 : 12, weight: 600 }, 
+            usePointStyle: true, pointStyle: 'circle', 
+            padding: window.innerWidth < 480 ? 10 : 20,
+            boxWidth: window.innerWidth < 480 ? 8 : 12
+          } 
         },
         tooltip: {
           backgroundColor: 'rgba(6,8,15,0.92)', titleColor: '#f1f5f9', bodyColor: '#94a3b8',
@@ -457,13 +463,14 @@ function renderChart(data) {
         x: { 
           ticks: { 
             color: (c) => c.tick.label && c.tick.label.includes('Future') ? '#a78bfa' : '#475569', 
-            font: { family: "'Inter',sans-serif", size: 11, weight: (c) => c.tick.label && c.tick.label.includes('Future') ? 'bold' : 'normal' }, 
-            maxRotation: 45 
+            font: { family: "'Inter',sans-serif", size: window.innerWidth < 480 ? 9 : 11, weight: (c) => c.tick.label && c.tick.label.includes('Future') ? 'bold' : 'normal' }, 
+            maxRotation: window.innerWidth < 480 ? 60 : 45,
+            maxTicksLimit: window.innerWidth < 480 ? 6 : 15
           }, 
           grid: { color: 'rgba(255,255,255,0.03)' } 
         },
         y: { 
-          ticks: { color: '#475569', font: { family: "'Inter',sans-serif", size: 11 }, callback: (v) => '₹' + v.toLocaleString('en-IN') }, 
+          ticks: { color: '#475569', font: { family: "'Inter',sans-serif", size: window.innerWidth < 480 ? 9 : 11 }, callback: (v) => '₹' + v.toLocaleString('en-IN') }, 
           grid: { color: 'rgba(255,255,255,0.03)' } 
         }
       }
