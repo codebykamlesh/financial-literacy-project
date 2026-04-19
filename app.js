@@ -283,41 +283,22 @@ function renderTrend(data) {
 }
 
 // ─── JS-BASED CHART PREDICTION LOGIC ───
-function calculateFuturePredictions(closes) {
-  if (closes.length < 5) return null;
+function calculateFuturePredictions(closes, analysis) {
+  if (closes.length < 2 || !analysis || !analysis.predicted_price) return null;
 
   const n = closes.length;
-  const last5 = closes.slice(-5);
-  // Moving average (SMA-5)
-  const sma5 = last5.reduce((a, b) => a + b, 0) / 5;
-  
-  // Momentum: Calculate average daily absolute change and current trajectory
-  const recentChange = (closes[n - 1] - closes[n - 5]) / closes[n - 5];
-  
-  let trend = 'FLAT';
-  if (recentChange > 0.015) trend = 'UP';
-  else if (recentChange < -0.015) trend = 'DOWN';
-
-  // Calculate generic confidence (50% to 95%) based on momentum magnitude
-  let confidence = 50 + (Math.abs(recentChange) * 100 * 8); 
-  confidence = Math.min(95, Math.max(50, confidence));
-
   const lastPrice = closes[n - 1];
+
+  // Base the first predicted point EXACTLY on the backend prediction
+  const p1 = analysis.predicted_price;
   
-  // Base daily step based on momentum and volatility
-  let dailyStep = (lastPrice * recentChange) / 4; 
-
-  // If the trend is very weak, lightly pull it towards the moving average
-  if (Math.abs(dailyStep) < lastPrice * 0.001) {
-    dailyStep = (sma5 - lastPrice) * 0.2;
-    trend = dailyStep > 0 ? 'UP' : 'DOWN';
-  }
-
-  // Generate 3 future points
-  // Dampening the step each day creates a smooth, visually realistic curve (asymptotic)
-  const p1 = lastPrice + dailyStep;
+  // Use the difference to damp future points for a smooth curve
+  let dailyStep = p1 - lastPrice;
   const p2 = p1 + (dailyStep * 0.85);
   const p3 = p2 + (dailyStep * 0.65);
+
+  let trend = analysis.price_direction || 'FLAT';
+  let confidence = analysis.confidence || 75;
 
   let rgb = '251, 191, 36'; // YELLOW (Stable)
   if (trend === 'UP') rgb = '52, 211, 153'; // GREEN (Uptrend)
@@ -339,8 +320,8 @@ function renderChart(data) {
   const highs  = h.map(d => d.high);
   const lows   = h.map(d => d.low);
 
-  // Calculate JS-based future prediction
-  const pred = calculateFuturePredictions(closes);
+  // Calculate future prediction aligned with the backend
+  const pred = calculateFuturePredictions(closes, a);
 
   // Extend data arrays with 3 future points
   if (pred) {
